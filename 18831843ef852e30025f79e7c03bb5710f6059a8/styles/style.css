@@ -1,0 +1,15 @@
+iframe {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  button {
+    text-decoration: none;
+    border: 0;
+    background: white;
+    font: monospace;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 10px;
+  }
