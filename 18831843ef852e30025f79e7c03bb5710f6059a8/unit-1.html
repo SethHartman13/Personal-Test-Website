@@ -7,12 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <title>ME201 Unit 1</title>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+    </script>
 </head>
 
 <body>
-    <iframe src="HW Notes/Unit 1/1.1.pdf" width="100%" height="700px">Could not load the pdf</iframe>
+    <button class="accordion active">For Windows Users:</button>
+    <div class="panel" style="display: block;">
+        <ol>
+            <li>Before downloading, check to make sure you don't already have Git installed on your computer</li>
+            <ul>
+                <li>Click on the 'Start' window icon on your computer in the bottom left of your screen.</li>
+                <li>Type 'cmd' to open the Command Prompt app. You should get the Command Prompt terminal to open. It
+                    doesn't matter what your prompt path is.</li>
+                <li>Type in
+                    <pre>git --version</pre> and hit enter.
+                </li>
+                <p>You should now either see a git version number come up or a message that says something about how
+                    'git' is not recognized. If you have a version number come up, you already have git installed and
+                    you don't need to install it. If you get the message that git is not recognized then you need to
+                    install it.</p>
+            </ul>
+            <li>To install Git for Windows. Go to <a href="http://git-scm.com/downloads"
+                    target="_blank">git-scm.com/downloads</a> and click on 'Windows' under Downloads. An .exe file
+                should be downloaded.</li>
+            <li>Click that .exe file to open it and it will begin the process of installing Git.</li>
+            <li>Allow it to make changes to your device.</li>
+            <li>Click 'Next' through all of the setup windows leaving all the defaults as they are. There will be quite
+                a few windows.</li>
+            <li>The last window will let you click 'Install' and click 'Finish'.</li>
+            <li>Open up a new Command Prompt window by closing the first Command Prompt window and start a new one by
+                typing 'cmd' at the Windows start button in the bottom left of your screen again. At the prompt, type:
+                <pre>git --version</pre> again if you want to see that it installed. You should now see the version
+                number. (If you don't use a new Command Prompt window, you could get the same message you had before you
+                installed Git.)
+            </li>
+            <p>While we are still in the Command Prompt we will type in two more commands to set up our username and
+                email that are associated with our GitHub account. Again it doesn't matter what the path prompt is.
+                These are global settings so you can type them from any path prompt.</p>
+            <li>The command is listed below, but make sure you use your own username and email between the "" quotes.
+                Use the username and your email you used for the GitHub account. It will be different for everyone.
+                Type:
+                <pre>git config --global user.name "<em>yourusername</em>"</pre>
+                and then hit enter. Nothing will happen if you did it right.
+                And then type:
+                <pre>git config --global user.email "<em>youremail@byui.edu</em>"</pre>
+                and then hit enter again.
+            </li>
+            <p>Now you have configured your Git to recognize your GitHub later.</p>
+        </ol>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3KpzB3ZZCZ4" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""></iframe>
+    </div>
+    <!--<iframe src="HW Notes/Unit 1/1.1.pdf" width="100%" height="700px">Could not load the pdf</iframe>
     <iframe src="HW Notes/Unit 1/1.2.pdf" width="100%" height="700px">Could not load the pdf</iframe>
-    <iframe src="HW Notes/Unit 1/1.3.pdf" width="100%" height="700px">Could not load the pdf</iframe>
+    <iframe src="HW Notes/Unit 1/1.3.pdf" width="100%" height="700px">Could not load the pdf</iframe>-->
 </body>
 
 </html>
